@@ -1,0 +1,51 @@
+{
+  "$schema": "https://raw.githubusercontent.com/ScoopInstaller/Scoop/master/schema.json",
+  "version": "2.7.4",
+  "description": "Instant, secure local folder sharing over Cloudflare tunnels with Quick-PIN security",
+  "homepage": "https://localbridge.theneritic.com",
+  "license": {
+    "identifier": "Freeware",
+    "url": "https://localbridge.theneritic.com/terms"
+  },
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/AjayShukla007/localbridge/releases/download/v2.7.4/localbridge-core-windows-amd64.exe#/localbridge.exe",
+      "hash": "be5705255b850844eb0596a2ff9ed098259760f8c9d1e0c037fba0d34bfcd9b6"
+    },
+    "arm64": {
+      "url": "https://github.com/AjayShukla007/localbridge/releases/download/v2.7.4/localbridge-core-windows-arm64.exe#/localbridge.exe",
+      "hash": "e882a8af6f991910b51383e2284e67840e9ca9e4ef2c19866d99707aa2b47f78"
+    }
+  },
+  "bin": [
+    [
+      "localbridge.exe",
+      "localbridge"
+    ],
+    [
+      "localbridge.exe",
+      "lb"
+    ]
+  ],
+  "checkver": {
+    "github": "https://github.com/AjayShukla007/localbridge"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/AjayShukla007/localbridge/releases/download/v$version/localbridge-core-windows-amd64.exe#/localbridge.exe",
+        "hash": {
+          "url": "https://github.com/AjayShukla007/localbridge/releases/download/v$version/checksums-core.txt",
+          "regex": "$sha256\\s+localbridge-core-windows-amd64\\.exe"
+        }
+      },
+      "arm64": {
+        "url": "https://github.com/AjayShukla007/localbridge/releases/download/v$version/localbridge-core-windows-arm64.exe#/localbridge.exe",
+        "hash": {
+          "url": "https://github.com/AjayShukla007/localbridge/releases/download/v$version/checksums-core.txt",
+          "regex": "$sha256\\s+localbridge-core-windows-arm64\\.exe"
+        }
+      }
+    }
+  }
+}

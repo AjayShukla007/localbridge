@@ -30,47 +30,33 @@ $ lb . --pin
 
 ---
 
-## Quick Installation
+## Install
 
-Choose the fastest installation method for your environment:
+### Package Managers
 
-### 1. Direct Shell Installers (Fastest & Universal)
-
-Install in one command with zero package manager dependencies:
-
-- **macOS & Linux (Terminal)**:
-  ```bash
-  curl -fsSL https://localbridge.theneritic.com/install.sh | sh
-  ```
-- **Windows (PowerShell)**:
-  ```powershell
-  irm https://localbridge.theneritic.com/install.ps1 | iex
-  ```
-
----
-
-### 2. Native Package Managers
-
-- **macOS (Homebrew)**:
+- **macOS & Linux (Homebrew)**:
   ```bash
   brew tap AjayShukla007/localbridge
   brew install localbridge
   ```
-- **Windows (Winget)**:
+- **Windows (Scoop)**:
+  ```powershell
+  # Via bucket
+  scoop bucket add localbridge https://github.com/AjayShukla007/scoop-bucket
+  scoop install localbridge
+
+  # Or directly from the manifest URL
+  scoop install https://raw.githubusercontent.com/AjayShukla007/localbridge/main/manifests/scoop/localbridge.json
+  ```
+- **Windows (WinGet)**:
   ```powershell
   winget install TheNeritic.LocalBridge
   ```
-- **Windows (Scoop)**:
-  ```powershell
-  scoop bucket add localbridge https://github.com/AjayShukla007/scoop-bucket
-  scoop install localbridge
-  ```
+  *Availability via `winget` is pending approval of the pull request in `microsoft/winget-pkgs`.*
 
----
+### Standalone Binaries
 
-### 3. Standalone Pre-Compiled Binaries
-
-Download standalone executables directly from our [GitHub Releases](https://github.com/AjayShukla007/localbridge/releases/latest) page:
+Download standalone executables directly from [GitHub Releases](https://github.com/AjayShukla007/localbridge/releases/latest):
 
 | Operating System | Architecture | Binary Asset |
 | :--- | :--- | :--- |
@@ -80,6 +66,8 @@ Download standalone executables directly from our [GitHub Releases](https://gith
 | **Windows** | ARM64 (Surface / Copilot+) | `localbridge-core-windows-arm64.exe` |
 | **Linux** | 64-bit (x86_64) | `localbridge-core-linux-amd64` |
 | **Linux** | ARM64 (Raspberry Pi 4/5) | `localbridge-core-linux-arm64` |
+
+> **Windows SmartScreen:** Direct downloads of unsigned binaries may trigger a Microsoft Defender SmartScreen prompt on first run. Select **More info** -> **Run anyway** to execute the binary, or verify the download SHA-256 hash against `checksums-core.txt`.
 
 ---
 
