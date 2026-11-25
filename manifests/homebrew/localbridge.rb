@@ -1,7 +1,6 @@
 class Localbridge < Formula
   desc "Share local folders over Cloudflare tunnels with Quick-PIN"
   homepage "https://localbridge.theneritic.com"
-  version "2.7.4"
   license :cannot_represent
 
   on_macos do
