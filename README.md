@@ -39,7 +39,9 @@ $ lb . --pin
   brew tap AjayShukla007/localbridge
   brew install localbridge
   ```
-- **Windows (Scoop)**:
+  Installs both `localbridge` and the `lb` alias.
+
+- **Windows (Scoop)** *(Recommended)*:
   ```powershell
   # Via bucket
   scoop bucket add localbridge https://github.com/AjayShukla007/scoop-bucket
@@ -48,11 +50,13 @@ $ lb . --pin
   # Or directly from the manifest URL
   scoop install https://raw.githubusercontent.com/AjayShukla007/localbridge/main/manifests/scoop/localbridge.json
   ```
+  Installs both `localbridge` and the `lb` alias.
+
 - **Windows (WinGet)**:
   ```powershell
   winget install TheNeritic.LocalBridge
   ```
-  *Availability via `winget` is pending approval of the pull request in `microsoft/winget-pkgs`.*
+  *Pending approval in `microsoft/winget-pkgs`. Installs `localbridge` only (WinGet portable packages support one command alias; use Scoop if you also want `lb`).*
 
 ### Standalone Binaries
 
